@@ -76,9 +76,9 @@ function collectStar (player, star)
 {
     star.disableBody(true, true);
     numofstars = numofstars + 1;
-    score += 10;
+    score += 25;
     scoreText.setText('Score: ' + score);
-    if (numofstars == 11)
+    if (numofstars == 12)
     {
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
@@ -132,30 +132,33 @@ this.physics.add.collider(player, platforms);
 
 function update ()
 {
-  if(numofstars == 0) {
-  } else if(numofstars == 1) {
+  if(score == 0) {
+  } else if(score > 1000 && score <=2000) {
     document.getElementById("content").innerHTML = "Did you know? Penguins wear tuxedos to help them blend in their environment and hide from predators!";
-  } else if(numofstars == 2) {
+  } else if(score > 2000 && score <=3000) {
         document.getElementById("content").innerHTML = "While penguins cannot fly, they are experts at diving and swimming, allowing them to catch fish in the ocean. In a sense, they are flying underwater!";
-  } else if(numofstars == 3) {
+  } else if(score > 3000 && score <=4000) {
         document.getElementById("content").innerHTML = "Penguins are monogamous, meaning they mate for life! Once two penguins fall in love, they stay together until the end of mating season, or even for life! ";
-  } else if(numofstars == 4) {
+  } else if(score > 4000 && score <=5000) {
         document.getElementById("content").innerHTML = "Daddy penguins also care for their eggs even after they hatch. Keeping the baby egg warm while the mommy hunts for food.";
-  } else if(numofstars == 5) {
+  } else if(score > 5000 && score <=6000) {
         document.getElementById("content").innerHTML = "In water, a group of penguins are called a raft. However, on land they are called a waddle! It surely does fit!";
-  } else if(numofstars == 6) {
+  } else if(score > 6000 && score <=7000) {
         document.getElementById("content").innerHTML = "Penguins sure do love to travel in groups. This is because more friends mean more protection from scary predators.";
-  } else if(numofstars == 7) {
+  } else if(score > 7000 && score <=8000) {
         document.getElementById("content").innerHTML = "A penguins diet usually consists of fish, krill, and squid. An “emperor’s” meal for sure.";
-  } else if(numofstars == 8) {
+  } else if(score > 8000 && score <=9000) {
         document.getElementById("content").innerHTML = "Penguins do not only live in the cold Antarctic. Penguins also can be found on the Galapagos islands, South Africa, Australia, Peru, New Zealand, and Chile. Our feathered friends like to play in the sun too sometimes!";
-  }else if(numofstars == 9) {
+  }else if(score > 9000 && score <=10000) {
         document.getElementById("content").innerHTML = "There are 17 different species of penguins! Some include the Emperor penguin, Adelie, African, King, Rockhopper, Royal, and more. Most penguins seem to have some royal lineage indeed.";
-  }else if(numofstars == 10) {
+  }else if(score > 10000 && score <=11000) {
         document.getElementById("content").innerHTML = "The smallest penguin species are the “Little Penguins.” These penguins can grow up to 33 centimeters, or 13 inches in height! Small enough to fit in your purse, but please don’t take one home.";
-  }else if(numofstars == 11) {
+  }else if(score > 11000 && score <=12000) {
         document.getElementById("content").innerHTML = "The largest species of penguins to ever exist were the “colossus penguins.” These birds could grow up to 8 feet tall and weighed up to 250 pounds! That’s taller than a polar bear on it’s hind legs (5.9-7.9 ft)!";
-  }else {
+  } else if(score > 12000){
+    document.getElementById("content").innerHTML = "YOU WIN!";
+  }
+  if (numofstars == 12){
         document.getElementById("content").innerHTML = "Penguins are cool!";
         numofstars = 0;
         stars = this.physics.add.group({
@@ -171,9 +174,9 @@ function collectStar (player, star)
 {
     star.disableBody(true, true);
     numofstars = numofstars + 1;
-    score += 10;
+    score += 25;
     scoreText.setText('Score: ' + score);
-    if (stars.countActive(true) === 0)
+    if (numofstars == 12)
     {
         stars.children.iterate(function (child) {
 
