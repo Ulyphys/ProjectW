@@ -22,7 +22,7 @@ margin : auto;
 }
 h2 {
   font-family: "Open sans", sans-serif;
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: 100;
   text-align-last: center;
   letter-spacing: 15px;
@@ -41,11 +41,11 @@ p {
 }
 #content {
   font-family: "Open sans", sans-serif;
-  font-size: 16pt;
+  font-size: 12pt;
   font-weight: bold;
   text-align-last: center;
   color: rgb(3, 30, 47);
-  line-height: 30px;
+  line-height: 10px;
   display:block;
   margin: auto;
   margin-top: 10px;
