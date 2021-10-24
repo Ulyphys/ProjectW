@@ -78,7 +78,7 @@ function collectStar (player, star)
     numofstars = numofstars + 1;
     score += 25;
     scoreText.setText('Score: ' + score);
-    if (numofstars == 12)
+    if (numofstars == 12 && score < 10000)
     {
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
@@ -174,15 +174,10 @@ function collectStar (player, star)
 {
     star.disableBody(true, true);
     numofstars = numofstars + 1;
-    score += 25;
+    score += 75;
     scoreText.setText('Score: ' + score);
     if (numofstars == 12)
     {
-        stars.children.iterate(function (child) {
-
-            child.enableBody(true, child.x, 0, true, true);
-
-        });
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 

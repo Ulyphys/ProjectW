@@ -18,7 +18,7 @@ body {
 }
 canvas {
 display : block;   
-margin : auto;
+margin: auto;
 }
 h2 {
   font-family: "Open sans", sans-serif;
@@ -45,13 +45,18 @@ p {
   font-weight: bold;
   text-align-last: center;
   color: rgb(3, 30, 47);
-  line-height: 10px;
+  line-height: 20px;
   display:block;
   margin: auto;
   margin-top: 10px;
   width: 25%;
   height: 75px;
   text-emphasis-style: bold;
+  text-align: center;
+
+  border: 3px solid navy;
+  background-color: #6BA7CC;
+  padding: 10px;
 }
 #game {
   display: block;
